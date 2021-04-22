@@ -46,7 +46,12 @@ service mkdir /system/bin/mkdir.sh
     disabled
     seclabel u:r:recovery:s0    
 
-
+service vibrator-service /system/bin/vendor.qti.hardware.vibrator@1.2-service
+    user root
+    group root
+    disabled
+    seclabel u:r:recovery:s0
+    
 service init-recovery-qcom-sh /init.recovery.qcom.sh
     user root
     group root
@@ -61,8 +66,3 @@ on boot
 #    chmod 0777 /sbin/unified-script.sh
 #    start unified-script
 
-service vibrator-service /system/bin/vendor.qti.hardware.vibrator@1.2-service
-    user root
-    group root
-    disabled
-    seclabel u:r:recovery:s0
