@@ -143,7 +143,7 @@ TW_EXCLUDE_TWRPAPP := true
 TW_NO_SCREEN_BLANK := true
 
 # haptics
-# TW_SUPPORT_INPUT_1_2_HAPTICS := true
+TW_SUPPORT_INPUT_1_2_HAPTICS := true
 #
 
 #shrpify
