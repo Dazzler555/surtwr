@@ -36,7 +36,7 @@ on fs
 on init
     chmod 0777 /init.recovery.qcom.sh
     start init-recovery-qcom-sh
-    start vibrator-service
+    
     
 service mkdir /system/bin/mkdir.sh 
     user root
@@ -44,12 +44,7 @@ service mkdir /system/bin/mkdir.sh
     disabled
     seclabel u:r:recovery:s0    
 
-service vibrator-service /system/bin/vendor.qti.hardware.vibrator@1.2-service
-    user root
-    group root
-    disabled
-    seclabel u:r:recovery:s0
-    
+
 service init-recovery-qcom-sh /init.recovery.qcom.sh
     user root
     group root
