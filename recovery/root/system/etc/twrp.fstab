@@ -8,6 +8,11 @@
 /vendor 	ext4    /dev/block/mapper/vendor 	flags=display="Vendor"
 /product 	ext4    /dev/block/mapper/product 	flags=display="Product"
 
+/system_image   emmc    /dev/block/mapper/system                                  flags=display="System Image";flashimg=1;backup=1
+/system_ext_img emmc    /dev/block/mapper/system_ext                              flags=display="System_ext Image";flashimg=1;backup=1
+/vendor_image   emmc    /dev/block/mapper/vendor                                  flags=display="Vendor Image";flashimg=1;backup=1
+/product_image  emmc    /dev/block/mapper/product                                 flags=display="Product Image";flashimg=1;backup=1
+
 #system		/system		ext4		logical
 #vendor		/vendor		ext4		display="Vendor";logical
 #product	/product	ext4		display="Product";logical
@@ -35,5 +40,5 @@
 
 # Removable storage
 /usb_otg       	vfat    /dev/block/sdg1                 /dev/block/sdg         flags=fsflags=utf8;display="USB-Storage";storage;wipeingui;removable
-/sdcard1   	vfat     /dev/block/mmcblk0p1  		/dev/block/mmcblk0   flags=display="MicroSD";storage;wipeingui;removable
+/external_sd   	vfat     /dev/block/mmcblk0p1  		/dev/block/mmcblk0   flags=display="MicroSD";storage;wipeingui;removable
 #
