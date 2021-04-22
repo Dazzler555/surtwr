@@ -28,8 +28,6 @@
 import /init.recovery.qcom_decrypt.rc
 
 on fs
-    chown system system /sys/bus/i2c/drivers/aw8624_haptic/3-005a/f0_save
-    chown system system /sys/bus/i2c/drivers/aw8624_haptic/3-005a/osc_save
     wait /dev/block/platform/soc/${ro.boot.bootdevice}
     symlink /dev/block/platform/soc/${ro.boot.bootdevice} /dev/block/bootdevice
 
