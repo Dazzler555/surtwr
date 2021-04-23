@@ -5,7 +5,7 @@
 # mount point  fstype  device                             device2                flags
 
 /system_root 	ext4    /dev/block/mapper/system 	flags=display="System"
-/vendor 	ext4    /dev/block/mapper/vendor 	flags=display="Vendor"
+vendor		/vendor			ext4		display="Vendor";logical
 /product 	ext4    /dev/block/mapper/product 	flags=display="Product"
 
 #system		/system		ext4		logical
