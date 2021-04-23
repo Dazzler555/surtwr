@@ -31,7 +31,16 @@ on fs
     wait /dev/block/platform/soc/${ro.boot.bootdevice}
     symlink /dev/block/platform/soc/${ro.boot.bootdevice} /dev/block/bootdevice
 
-
+on init
+    start vibrator-service
 on boot
     setprop sys.usb.config adb
+
     
+    
+      
+service vibrator-service /system/bin/vendor.qti.hardware.vibrator@1.2-service
+    user root
+    group root
+    disabled
+    seclabel u:r:recovery:s0    
