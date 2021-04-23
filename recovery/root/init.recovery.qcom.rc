@@ -28,17 +28,12 @@
 import /init.recovery.qcom_decrypt.rc
 
 on fs
-    chown system system /sys/bus/i2c/drivers/aw8624_haptic/3-005a/f0_save
-    chown system system /sys/bus/i2c/drivers/aw8624_haptic/3-005a/osc_save
     wait /dev/block/platform/soc/${ro.boot.bootdevice}
     symlink /dev/block/platform/soc/${ro.boot.bootdevice} /dev/block/bootdevice
 
 
 
 on init
-    chmod 0777 /init.recovery.qcom.sh
-    start init-recovery-qcom-sh
-    start vibrator-service
     
 service mkdir /system/bin/mkdir.sh 
     user root
@@ -47,22 +42,9 @@ service mkdir /system/bin/mkdir.sh
     seclabel u:r:recovery:s0    
 
 
-service init-recovery-qcom-sh /init.recovery.qcom.sh
-    user root
-    group root
-    disabled
-    oneshot
-    seclabel u:r:recovery:s0
-
 on boot
     setprop sys.usb.config adb
     chmod 0777 /system/bin/mkdir.sh
     start mkdir
 #    chmod 0777 /sbin/unified-script.sh
 #    start unified-script
-
-service vibrator-service /system/bin/vendor.qti.hardware.vibrator@1.2-service
-    user root
-    group root
-    disabled
-    seclabel u:r:recovery:s0

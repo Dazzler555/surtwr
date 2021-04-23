@@ -143,14 +143,21 @@ TW_EXCLUDE_TWRPAPP := true
 TW_NO_SCREEN_BLANK := true
 
 # haptics
-TW_SUPPORT_INPUT_1_2_HAPTICS := true
+
 #
 
 #shrpify
 SHRP_DEVICE_CODE := surya
 SHRP_PATH := device/xiaomi/surya
 SHRP_REC_TYPE := Treble
+SHRP_MAINTAINER := BRock
+SHRP_FLASH := 1
+SHRP_FONP_1 := /sys/class/leds/led:torch_0/brightness
+SHRP_FONP_2 := /sys/class/leds/led:torch_1/brightness
+SHRP_FONP_3 := /sys/class/leds/led:switch/brightness
+SHRP_FLASH_MAX_BRIGHTNESS := 200
 SHRP_DEVICE_TYPE := SAR
+SHRP_DARK := true
 SHRP_REC := /dev/block/bootdevice/by-name/recovery
 SHRP_INTERNAL := /sdcard
 SHRP_EXTERNAL := /external_sd
