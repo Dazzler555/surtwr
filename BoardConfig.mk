@@ -16,6 +16,7 @@
 # limitations under the License.
 #
 
+DEVICE_PATH := device/xiaomi/surya
 # Architecture
 TARGET_ARCH := arm64
 TARGET_ARCH_VARIANT := armv8-a
@@ -119,6 +120,10 @@ BOARD_USES_METADATA_PARTITION := true
 PLATFORM_VERSION := 16.1.0
 BOARD_USES_QCOM_FBE_DECRYPTION := true
 
+# Init
+TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_surya
+TARGET_RECOVERY_DEVICE_MODULES := libinit_surya
+TARGET_PLATFORM_DEVICE_BASE := /devices/soc/
 
 
 # CUSTOM_LUN_FILE
@@ -159,7 +164,7 @@ SHRP_FONP_2 := /sys/class/leds/led:torch_1/brightness
 SHRP_FONP_3 := /sys/class/leds/led:switch/brightness
 SHRP_FLASH_MAX_BRIGHTNESS := 200
 SHRP_DEVICE_TYPE := SAR
-SHRP_DARK := true
+#SHRP_DARK := true
 SHRP_REC := /dev/block/bootdevice/by-name/recovery
 SHRP_INTERNAL := /sdcard
 SHRP_EXTERNAL := /external_sd
