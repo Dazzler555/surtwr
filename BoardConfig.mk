@@ -70,7 +70,7 @@ BOARD_MKBOOTIMG_ARGS += --kernel_offset $(BOARD_KERNEL_OFFSET)
 BOARD_MKBOOTIMG_ARGS += --second_offset $(BOARD_KERNEL_SECOND_OFFSET)
 BOARD_MKBOOTIMG_ARGS += --dtb_offset $(BOARD_DTB_OFFSET)
 BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOT_HEADER_VERSION)
-BOARD_MKBOOTIMG_ARGS += --dtb $(TARGET_PREBUILT_DTB)
+BOARD_MKBOOTIMG_ARGS += --dtb device/xiaomi/surya/prebuilt/dtb
 
 # QCOM
 #TARGET_USE_SDCLANG := true
@@ -157,46 +157,4 @@ TW_SKIP_COMPATIBILITY_CHECK := true
 # haptics
 TW_SUPPORT_INPUT_1_2_HAPTICS := true
 #
-
-#shrpify
-SHRP_DEVICE_CODE := surya
-SHRP_PATH := device/xiaomi/surya
-SHRP_REC_TYPE := Treble
-SHRP_MAINTAINER := BRock
-SHRP_FLASH := 1
-SHRP_FONP_1 := /sys/class/leds/led:torch_0/brightness
-SHRP_FONP_2 := /sys/class/leds/led:torch_1/brightness
-SHRP_FONP_3 := /sys/class/leds/led:switch/brightness
-SHRP_FLASH_MAX_BRIGHTNESS := 200
-SHRP_DEVICE_TYPE := SAR
-SHRP_DARK := true
-SHRP_REC := /dev/block/bootdevice/by-name/recovery
-SHRP_INTERNAL := /sdcard
-SHRP_EXTERNAL := /external_sd
-SHRP_OTG := /usb_otg
-SHRP_EDL_MODE := 1
-# SHRP_EXPRESS := true
-SHRP_NOTCH := true
-SHRP_STATUSBAR_RIGHT_PADDING := 30
-SHRP_STATUSBAR_LEFT_PADDING := 30
-
-
-SHRP_SKIP_DEFAULT_ADDON_4 := true
-
-INC_IN_REC_ADDON_1 := true
-INC_IN_REC_ADDON_2 := true
-INC_IN_REC_ADDON_3 := true
-INC_IN_REC_MAGISK := true
-
-# Add custom add-ons
-
-SHRP_EXTERNAL_ADDON_PATH := "device/xiaomi/surya/addons/"
-
-SHRP_EXTERNAL_ADDON_1_NAME := "Disable Force Encryption"
-SHRP_EXTERNAL_ADDON_1_INFO := "Disable Force Encryption in roms"
-SHRP_EXTERNAL_ADDON_1_FILENAME := "Disable_Dm-Verity_ForceEncrypt_20210320.zip"
-SHRP_EXTERNAL_ADDON_1_BTN_TEXT := "Disable"
-SHRP_EXTERNAL_ADDON_1_SUCCESSFUL_TEXT := "Disabled-Encryption Successfully"
-SHRP_INC_IN_REC_EXTERNAL_ADDON_1 := true
-
 
