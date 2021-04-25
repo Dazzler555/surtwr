@@ -57,7 +57,7 @@ BOARD_KERNEL_SECOND_OFFSET := 0x00f00000
 BOARD_RAMDISK_OFFSET       := 0x01000000
 BOARD_DTB_OFFSET           := 0x01f00000
 TARGET_KERNEL_ARCH := arm64
-BOARD_PREBUILT_DTBIMAGE_DIR := $(DEVICE_PATH)/prebuilt/dtb := device/xiaomi/surya/prebuilt/dtb
+BOARD_PREBUILT_DTBIMAGE_DIR := device/xiaomi/surya/prebuilt/dtb
 TARGET_PREBUILT_KERNEL := device/xiaomi/surya/prebuilt/kernel
 BOARD_PREBUILT_DTBOIMAGE := device/xiaomi/surya/prebuilt/dtbo
 BOARD_INCLUDE_RECOVERY_DTBO := true
