@@ -174,3 +174,29 @@ SHRP_EDL_MODE := 1
 SHRP_NOTCH := true
 SHRP_STATUSBAR_RIGHT_PADDING := 30
 SHRP_STATUSBAR_LEFT_PADDING := 30
+
+
+SHRP_SKIP_DEFAULT_ADDON_4 := true
+
+INC_IN_REC_ADDON_1 := true
+INC_IN_REC_ADDON_2 := true
+INC_IN_REC_ADDON_3 := true
+INC_IN_REC_MAGISK := true
+
+# Add custom add-ons
+
+SHRP_EXTERNAL_ADDON_PATH := "device/xiaomi/surya/addons/"
+
+SHRP_EXTERNAL_ADDON_1_NAME := "Disable Force Encryption"
+SHRP_EXTERNAL_ADDON_1_INFO := "Disable Force Encryption in roms"
+SHRP_EXTERNAL_ADDON_1_FILENAME := "Disable_Dm-Verity_ForceEncrypt_20210320.zip"
+SHRP_EXTERNAL_ADDON_1_BTN_TEXT := "Disable"
+SHRP_EXTERNAL_ADDON_1_SUCCESSFUL_TEXT := "Disabled-Encryption Successfully"
+SHRP_INC_IN_REC_EXTERNAL_ADDON_1 := true
+
+SHRP_EXTERNAL_ADDON_2_NAME := "Stock Recovery Deactivation"
+SHRP_EXTERNAL_ADDON_2_INFO := "SHRP will not be replaced after flashing roms like miui with this patch"
+SHRP_EXTERNAL_ADDON_2_FILENAME := "Disable_Dm-Verity_Enfec_20210320.zip"
+SHRP_EXTERNAL_ADDON_2_BTN_TEXT := "Patch"
+SHRP_EXTERNAL_ADDON_2_SUCCESSFUL_TEXT := "Successful"
+SHRP_INC_IN_REC_EXTERNAL_ADDON_2 := true
